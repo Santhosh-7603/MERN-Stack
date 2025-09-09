@@ -7,7 +7,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 mongoose.connect("mongodb+srv://santhoshm7603_db_user:0xvufyx5anq3yhDP@cluster0.m8lxylq.mongodb.net/crud?retryWrites=true&w=majority&appName=Cluster0")
-
+app.get("/",(req,res)=>{
+    res.send("Hii my website backend")
+})
 app.post('/createUser',(req,res)=>{
     UserModel.create(req.body)
     .then(data => res.json(data))
