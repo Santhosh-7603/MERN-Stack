@@ -21,7 +21,7 @@ const UpdateUser = () => {
     const {id} = useParams()
 
     useEffect(()=>{
-      axios.get('http://localhost:3000/getUser/'+id)
+      axios.get('https://backend-mu-two-98.vercel.app/getUser/'+id)
       .then(res=>{setData(res.data)})
       .catch(err=>console.log(err))
     },[])
