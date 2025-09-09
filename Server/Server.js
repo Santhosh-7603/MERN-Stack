@@ -6,7 +6,7 @@ const UserModel = require('./models/Users')
 const app = express()
 app.use(cors())
 app.use(express.json())
-mongoose.connect("mongodb://127.0.0.1:27017/users")
+mongoose.connect("mongodb+srv://santhoshm7603_db_user:0xvufyx5anq3yhDP@cluster0.m8lxylq.mongodb.net/crud?retryWrites=true&w=majority&appName=Cluster0")
 
 app.post('/createUser',(req,res)=>{
     UserModel.create(req.body)
