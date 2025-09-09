@@ -69,7 +69,7 @@ const CreateUser = () => {
         e.preventDefault()
         const hasError = Object.values(error).find((e)=>e.length !== 0)
         if (!hasError){
-          axios.post('http://localhost:3000/createUser',data)
+          axios.post('https://backend-mu-two-98.vercel.app/createUser',data)
           .then(()=>navigate('/'))
           .catch(err=>console.log(err))
         }

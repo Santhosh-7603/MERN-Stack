@@ -7,7 +7,7 @@ const DisplayUsers = () => {
     const navigate = useNavigate()
 
     const handleDelete =  (id) => {
-        axios.delete(`http://localhost:3000/deleteUser/${id}`)
+        axios.delete(`https://backend-mu-two-98.vercel.app/deleteUser/${id}`)
         .then(res=>{
             setData((prev)=> prev.filter((e)=>e._id !== id))
             console.log(res, "user Deleted")
@@ -16,7 +16,7 @@ const DisplayUsers = () => {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:3000/getUser')
+        axios.get('https://backend-mu-two-98.vercel.app/getUser')
             .then(res => {setData(res.data)})
             .catch(err => console.log(err))
     }, [])

@@ -33,7 +33,7 @@ const UpdateUser = () => {
         e.preventDefault()
         const hasError = Object.values(error).find((e)=>e.length !== 0)
         if (!hasError){
-          axios.put('http://localhost:3000/updateUser/'+id ,{
+          axios.put('https://backend-mu-two-98.vercel.app/updateUser/'+id ,{
             name : data.name,
             email: data.email,
             phone: data.phone,
